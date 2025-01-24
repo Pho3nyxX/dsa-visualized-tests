@@ -34,7 +34,7 @@ describe("Menu", () => {
 		cy.get("#sub-menu-2").should("not.be.visible");
 	});
 
-	it.only("click twice on algorithms should open algorithms sub menu", () => {
+	it("click twice on algorithms should open algorithms sub menu", () => {
         cy.viewport(512, 768);
 		cy.get("nav .nav-toggle-container").should("be.visible");
 		cy.get("nav .nav-toggle-container").click();
@@ -44,16 +44,17 @@ describe("Menu", () => {
 		cy.get("#sub-menu-2").should("be.visible");
 	});
     
-    it("click twice should close", () => {
+	it("data structure click should show sub menu", () => {
+		cy.viewport("macbook-16");
+		cy.get("#data-structures").click();
+		cy.get("#sub-menu-1").should("be.visible");
+	});
+
+    it.only("data structure click twice should close sub menu", () => {
         cy.viewport("macbook-16");
         cy.get("#data-structures").click();
         cy.get("#data-structures").click();
         cy.get(".sub-menu").should("not.be.visible");
     });
 
-	it("clicked should show sub menu", () => {
-        cy.viewport("macbook-16");
-		cy.get("#data-structures").click();
-		cy.get("#sub-menu-1").should("be.visible");
-	});
 });
