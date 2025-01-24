@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'http://localhost:3000/',
-    specPattern: 'cypress/e2e/3-dsa-visualized-ui/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/e2e/tests/**/*.cy.{js,jsx,ts,tsx}',
     defaultCommandTimeout: 15000,
   },
 });

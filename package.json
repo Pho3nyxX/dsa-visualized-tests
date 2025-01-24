@@ -5,7 +5,7 @@
   "scripts": {
     "cy:open": "cypress open"
   },
-  "author": "",
+  "author": "Abi Matthews-Gordon (https://abimatthewsgordon.dev)",
   "license": "ISC",
   "description": "",
   "devDependencies": {
