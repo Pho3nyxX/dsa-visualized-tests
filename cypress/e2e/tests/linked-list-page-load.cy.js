@@ -9,7 +9,7 @@ describe("Linked list page", () => {
 		cy.get(".menu-container>.menu>li:first-child >a").click();
         cy.get(".menu-container>.menu>li:first-child ul").should("be.visible");
         cy.get(".menu-container>.menu>li:first-child ul li:nth-child(2)").click();
-        // verify redirect
+        cy.url().should("include", "/linked-list");
     });
 
     it("title should display - linked list", () => {
@@ -18,5 +18,13 @@ describe("Linked list page", () => {
         cy.get(".menu-container>.menu>li:first-child ul").should("be.visible");
         cy.get(".menu-container>.menu>li:first-child ul li:nth-child(2)").click();
         cy.title().should('include', 'linked list');
+    });
+
+    it("content should have Linked List", () => {
+        cy.get(".menu-title").should("be.visible");
+		cy.get(".menu-container>.menu>li:first-child >a").click();
+        cy.get(".menu-container>.menu>li:first-child ul").should("be.visible");
+        cy.get(".menu-container>.menu>li:first-child ul li:nth-child(2)").click();
+        cy.get(".content-display").contains("Linked List");
     });
 });
