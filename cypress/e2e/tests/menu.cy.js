@@ -62,11 +62,4 @@ describe("Menu", () => {
 		cy.get(".menu-container>.menu>li:nth-child(2) >a").click();
 		cy.get(".menu-container>.menu>li:nth-child(2) ul").should("be.visible");
 	});
-
-    // it.only("algorithms click twice should close sub menu", () => {
-    //     cy.viewport("macbook-16");
-	// 	cy.get(".menu-container>.menu>li:nth-child(2) >a").click();
-	// 	cy.get(".menu-container>.menu>li:nth-child(2) >a").click();
-    //     cy.get(".menu-container>.menu>li:nth-child(2) ul").should("not.be.visible");
-    // });
 });
